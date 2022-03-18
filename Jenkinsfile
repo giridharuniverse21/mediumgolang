@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('', 'dockerhub') {
-                        def customImage = docker.build("gkdocker21/docker123:$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH")
+                        def customImage = docker.build("gkdocker21/golang123:$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH")
                         customImage.push()
                     }
                 }
